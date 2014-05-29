@@ -164,3 +164,40 @@
     /*background-color: grey;*/
     margin-left: 40px;
 }
+
+.item_list {
+    margin-left: 60px;
+}
+
+.modal_window {
+    display: none;
+    position: absolute;
+    width: 990px;
+    left:5px;
+    top:5px;
+    min-height: 300px;
+    background-color: silver;
+    border-color: 1px solid #00008b;
+}
+
+#modal_window_close {
+    margin: 10px;
+}
+
+#description {
+    width: 750px;
+    margin: 10px;
+}
+
+#title{
+    width: 500px;
+    margin: 10px;
+
+}
+
+#body {
+    width: 750px;
+    margin: 10px;
+    min-height: 400px;
+
+}

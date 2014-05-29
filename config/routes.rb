@@ -7,11 +7,11 @@ OomaReport::Application.routes.draw do
   #get "report/day"
 
   get "manager/index"
-  post "manager/addmenu"
   get "manager/deletemenu"
-  get "manager/deletesubmenu"
-
-  post "manager/addsubmenu"
+  post "manager/addmenu"
+  post "manager/additem"
+  post "manager/updateitem"
+  get "manager/deleteitem"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
