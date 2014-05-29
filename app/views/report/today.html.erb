@@ -1,0 +1,98 @@
+<div class="close">
+  <%= link_to('x', root_path) %>
+</div>
+<%= form_tag("/report/today", method: "post") do %>
+    <%= label_tag(:name, "Name:") %>
+    <%= select_tag(:name, options_from_collection_for_select(@users, "id", "name", :selected => @username) ) %>
+    <br />
+    <%= label_tag(:name, "Date:") %>
+    <%= text_field_tag(:date) %>
+    <br />
+    <br />
+    <div id='my_list'>
+      <div class="the_bug">
+          <div class='inline bug'>
+            <%= text_field_tag("bug[]", nil, :placeholder => 'bug number') %>
+          </div>
+          <div class='inline points'>
+            <%= select_tag('points[]', options_points) %>
+          </div>
+          <div class='inline project'>
+            <%= select_tag("project[]", options_from_collection_for_select(@projects, "id", "name")) %>
+          </div>
+          <div class='inline description'>
+            <%= text_field_tag("description[]", nil, :placeholder => 'description') %>
+          </div>
+          <div class='inline status'>
+            <%= select_tag('status[]', options_status) %>
+          </div>
+          <div class='inline estimate'>
+            <%= text_field_tag("estimate[]", nil, :placeholder => 'estimate') %>
+          </div>
+        <div style='clear:both'></div>
+      </div>
+
+      <div class="the_bug">
+        <div class='inline bug'>
+          <%= text_field_tag("bug[]", nil, :placeholder => 'bug number') %>
+        </div>
+        <div class='inline points'>
+          <%= select_tag('points[]', options_points) %>
+        </div>
+        <div class='inline project'>
+          <%= select_tag("project[]", options_from_collection_for_select(@projects, "id", "name")) %>
+        </div>
+        <div class='inline description'>
+          <%= text_field_tag("description[]", nil, :placeholder => 'description') %>
+        </div>
+        <div class='inline status'>
+          <%= select_tag('status[]', options_status) %>
+        </div>
+        <div class='inline estimate'>
+          <%= text_field_tag("estimate[]", nil, :placeholder => 'estimate') %>
+        </div>
+        <div style='clear:both'></div>
+      </div>
+
+    </div>
+    <div id="more" style="cursor: pointer; margin: 7px; color: blue;">[+ 1]</div>
+    <br />
+    <br />
+    <%= submit_tag("Submit") %>
+<% end %>
+
+<div style="display: none;" id="new_list">
+  <div class="the_bug">
+    <div class='inline bug'>
+      <%= text_field_tag("bug[]", nil, :placeholder => 'bug number') %>
+    </div>
+    <div class='inline points'>
+      <%= select_tag('points[]', options_points) %>
+    </div>
+    <div class='inline project'>
+      <%= select_tag("project[]", options_from_collection_for_select(@projects, "id", "name")) %>
+    </div>
+    <div class='inline description'>
+      <%= text_field_tag("description[]", nil, :placeholder => 'description') %>
+    </div>
+    <div class='inline status'>
+      <%= select_tag('status[]', options_status) %>
+    </div>
+    <div class='inline estimate'>
+      <%= text_field_tag("estimate[]", nil, :placeholder => 'estimate') %>
+    </div>
+    <div style='clear:both'></div>
+  </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(function() {
+            $( "#date" ).datepicker().datepicker('setDate', 'today');
+        });
+
+        $('#more').click(function() {
+            $('#my_list').append($('#new_list').html());
+        });
+    });
+</script>

@@ -1,0 +1,22 @@
+
+
+<!--<%= link_to('send my report', '/report/today') %>-->
+
+<div class="">
+  <%= print_menus(@menus) %>
+
+  <div style="color:blue;cursor:pointer;" onclick="$('#add_menu_button').hide();$('#add_menu').show();" id="add_menu_button">
+    [add menu]
+  </div>
+
+  <div style="display:none" id="add_menu">
+  <%= form_tag("/manager/addmenu", method: "post") do %>
+      <%= text_field_tag("title", nil, :placeholder => 'title') %>
+      <%= submit_tag(" add") %>
+  <% end %>
+  </div>
+
+</div>
+
+
+

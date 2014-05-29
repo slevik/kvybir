@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+#1:
+#  name: Marat K
+#  description:
+#  email:
+#
+#2:
+#  name: Slava K
+#  description:
+#  email:
+#
+#3:
+#  name: Alex M
+#
+#4:
+#  name: Sergey K
+#
+#5:
+#  name: Roman F
+#
+#6:
+#  name: Volodymyr P
+#
+#7:
+#  name: Alexey V
+#
+#8:
+#  name: Oleg V
+#
+#9:
+#  name: Anton Z
+#
+#10:
+#  name: Oleg O
+#
+#11:
+#  name: Sergey Z
+#
+#12:
+#  name: Lyuba A
