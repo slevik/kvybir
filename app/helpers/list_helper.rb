@@ -65,7 +65,7 @@ module ListHelper
       f = f + ' <br />'
       f = f + text_area_tag("description", nil, :placeholder => 'description')
       f = f + ' <br />'
-      f = f + text_area_tag("body", nil, :placeholder => 'body')
+      f = f + text_area_tag("body", nil, :placeholder => 'body', :class => 'body22')
       f = f + ' <br />'
       f = f + submit_tag(" add")
       f.html_safe
@@ -82,7 +82,7 @@ module ListHelper
       f = f + ' <br />'
       f = f + text_area_tag("description", item.description, :placeholder => 'description')
       f = f + ' <br />'
-      f = f + text_area_tag("body", item.body, :placeholder => 'body')
+      f = f + text_area_tag("body", item.body, :placeholder => 'body', :class => 'body22')
       f = f + ' <br />'
       f = f + submit_tag(" update")
       f.html_safe
