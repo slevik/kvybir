@@ -9,7 +9,7 @@ module ListHelper
       res = res + "<span class='delete_menu' style=''>#{link_to('[delete]', "/manager/deletemenu?menu=#{menu.id}")}</span>"
 
 
-      form = form_tag("/manager/addsubmenu", method : "post") do
+      form = form_tag("/manager/addsubmenu", method: "post") do
       f = ''
       f = f + hidden_field_tag("menu", nil, :value => menu.id)
       f = f + text_field_tag("title", nil, :placeholder => 'title')
@@ -37,7 +37,7 @@ def print_submenus(menus)
     res = res + "<span class='delete_menu' style=''>#{link_to('[delete]', "/manager/deletesubmenu?menu=#{menu.id}")}</span>"
 
 
-    form = form_tag("/manager/addsubmenu", method : "post") do
+    form = form_tag("/manager/addsubmenu", method: "post") do
     f = ''
     f = f + hidden_field_tag("menu", nil, :value => menu.id)
     f = f + text_field_tag("title", nil, :placeholder => 'title')
