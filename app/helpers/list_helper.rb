@@ -9,34 +9,7 @@ module ListHelper
       res = res + "<span class='delete_menu' style=''>#{link_to('[delete]', "/manager/deletemenu?menu=#{menu.id}")}</span>"
 
 
-      form = form_tag("/manager/addsubmenu", method: "post") do
-              f = ''
-              f = f + hidden_field_tag("menu", nil, :value => menu.id)
-              f = f + text_field_tag("title", nil, :placeholder => 'title')
-              f = f + submit_tag(" add")
-              f.html_safe
-             end
-
-      res = res + " <span id='m#{i}' style='cursor:pointer;color:blue;' onclick='$(\"#m#{i}\").hide(); $(\"#_m#{i}\").show();'> [add menu] </span><div id='_m#{i}' style='display:none'>#{form}</div>"
-
-      res = res + print_submenus(submenus)
-      res = res + "<br />"
-      i = i + 1
-    end
-    res.html_safe
-  end
-
-  def print_submenus(menus)
-    res = '<div class="sub_menu"> '
-    i = 0
-    menus.map do |menu|
-      submenus = Submenus.where(:menu => menu.id).order('position ASC').limit(1000).all
-
-      res = res + "<span class='menu'> #{menu.title} </span>"
-      res = res + "<span class='delete_menu' style=''>#{link_to('[delete]', "/manager/deletesubmenu?menu=#{menu.id}")}</span>"
-
-
-      form = form_tag("/manager/addsubmenu", method: "post") do
+      form = form_tag("/manager/addsubmenu", method : "post") do
       f = ''
       f = f + hidden_field_tag("menu", nil, :value => menu.id)
       f = f + text_field_tag("title", nil, :placeholder => 'title')
@@ -44,45 +17,59 @@ module ListHelper
       f.html_safe
     end
 
-    res = res + " <span id='sm#{i}' style='cursor:pointer; color:blue;' onclick='$(\"#sm#{i}\").hide(); $(\"#_sm#{i}\").show();'> [add menu] </span><div id='_sm#{i}' style='display:none'>#{form}</div>"
+    res = res + " <span id='m#{i}' style='cursor:pointer;color:blue;' onclick='$(\"#m#{i}\").hide(); $(\"#_m#{i}\").show();'> [add menu] </span><div id='_m#{i}' style='display:none'>#{form}</div>"
 
-    res = res + print_subsubmenus(submenus)
-
+    res = res + print_submenus(submenus)
     res = res + "<br />"
     i = i + 1
   end
-  res = res + " </div>"
+
   res.html_safe
+end
+
+def print_submenus(menus)
+  res = '<div class="sub_menu"> '
+  i = 0
+  menus.map do |menu|
+    submenus = Submenus.where(:menu => menu.id).order('position ASC').limit(1000).all
+
+    res = res + "<span class='menu'> #{menu.title} </span>"
+    res = res + "<span class='delete_menu' style=''>#{link_to('[delete]', "/manager/deletesubmenu?menu=#{menu.id}")}</span>"
+
+
+    form = form_tag("/manager/addsubmenu", method : "post") do
+    f = ''
+    f = f + hidden_field_tag("menu", nil, :value => menu.id)
+    f = f + text_field_tag("title", nil, :placeholder => 'title')
+    f = f + submit_tag(" add")
+    f.html_safe
   end
+
+  res = res + " <span id='sm#{i}' style='cursor:pointer; color:blue;' onclick='$(\"#sm#{i}\").hide(); $(\"#_sm#{i}\").show();'> [add menu] </span><div id='_sm#{i}' style='display:none'>#{form}</div>"
+
+  res = res + print_subsubmenus(submenus)
+
+  res = res + "<br />"
+  i = i + 1
+end
+
+res = res + " </div>"
+res.html_safe
+end
 
 
 def print_subsubmenus(menus)
   res = '<div class="sub_sub_menu"> '
   i = 0
   menus.map do |menu|
-    #submenus = Submenus.where(:menu => menu.id).order('position ASC').limit(1000).all
-
     res = res + "<span class='menu'> #{menu.title} </span>"
     res = res + "<span class='delete_menu' style=''>#{link_to('[delete]', "/manager/deletesubmenu?menu=#{menu.id}")}</span>"
 
-
-    #form = form_tag("/manager/addsubmenu", method: "post") do
-    #f = ''
-    #f = f + hidden_field_tag("menu", nil, :value => menu.id)
-    #f = f + text_field_tag("title", nil, :placeholder => 'title')
-    #f = f + submit_tag(" add")
-    #f.html_safe
-    # end
-
-  #res = res + " <span id='sm#{i}' style='cursor:pointer' onclick='$(\"#sm#{i}\").hide(); $(\"#_sm#{i}\").show();'> [menu] </span><div id='_sm#{i}' style='display:none'>#{form}</div>"
-
-  #res = res + print_subsubmenus(submenus)
-
-  res = res + "<br />"
-  i = i + 1
-end
-res = res + " </div>"
-res.html_safe
+    res = res + "<br />"
+    i = i + 1
+  end
+  res = res + " </div>"
+  res.html_safe
 end
 
 
