@@ -1,5 +1,6 @@
 OomaReport::Application.routes.draw do
   get "item/show/:id" => 'item#show'
+  get "item/info/:id" => 'item#info'
 
   get "manager" => 'manager#index'
   get "manager/index"

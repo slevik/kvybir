@@ -1,12 +1,54 @@
 module ItemHelper
+
+  def show_item_body(item)
+    return '' unless item
+    res = ''
+    res = res + "<div class='item_show_full'><div class='item_title_show_full'>##{item.title}</div><br /><div class='item_description_show_full'>#{item.body}</div></div>"
+    res.html_safe
+  end
+
   def show_horizontal_item_list(items)
     return '' unless items
     return '' if items.size == 0
     res = ''
     items.map do |menu|
-      res = res + "<div class='item_show'><div class='item_title_show'>#{menu.title}</div><div class='item_description_show'>#{menu.description}</div></div>"
+      res = res + "<div class='item_show'><div class='item_title_show'>#<a href='/item/info/#{menu.id}'>#{menu.title}</a></div><div class='item_description_show'>#{menu.description}</div></div>"
     end
     res.html_safe
+  end
+
+  def show_items_on_the_same_menu(item)
+    return '' unless item
+    menu = Submenus.where(:id => item.menu).first
+    return '' unless menu
+    items = Items.where(:menu => menu.id).order('position ASC').limit(1000).all
+    return '' unless items
+    return '' if items.size == 0
+    res = ''
+    items.map do |menu|
+      next if item.id == menu.id
+      res = res + "<div class='item_show' style='width:100% !important'><div class='item_title_show' style='font-size:16px;'>#<a href='/item/info/#{menu.id}'>#{menu.title}</a></div><div style='font-size:14px;' class='item_description_show'>#{menu.description}</div></div>"
+    end
+    res.html_safe
+  end
+
+  def print_crumbs(id)
+    return '' unless id
+    submenu = Submenus.where(:id => id).first
+    res = []
+    if submenu
+      res << "#{submenu.title}"
+      submenu = Submenus.where(:id => submenu.menu).first
+      if submenu
+        res << "#{submenu.title}"
+        submenu = Submenus.where(:id => submenu.menu).first
+        if submenu
+          res << "#{submenu.title}"
+        end
+      end
+    end
+    res << '<a href="\"><img src="/assets/home.png" class="home_image"/></a>'
+    res.reverse.join(' > ').html_safe
   end
 
   def print_horizontal_menus(menus)

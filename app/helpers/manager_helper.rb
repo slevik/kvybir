@@ -45,7 +45,7 @@ module ManagerHelper
     return '' unless items
     res = '<div class="item_list"> '
     items.map do |item|
-      res = res + "<span style='cursor:pointer' onclick='$(\"#modal_window_body\").html($(\"#edit_item_#{item.id}\").html()); $(\".modal_window\").toggle();'>#{item.title}</span>"
+      res = res + "<span style='cursor:pointer; text-decoration:underline;color:darkgrey;' onclick='$(\"#modal_window_body\").html($(\"#edit_item_#{item.id}\").html()); $(\".modal_window\").toggle();'>#{item.title}</span>"
       res = res + "<span class='delete_menu' style=''>#{link_to(' [delete]', "/manager/deleteitem?id=#{item.id}")}</span>"
       res = res + form2_edit(item)
       res = res + "<br />"
