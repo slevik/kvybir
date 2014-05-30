@@ -1,0 +1,498 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+ */
+
+
+.inline {
+    float: left;
+}
+
+.main {
+    padding:0px; margin: 0px; border:1px solid #b8860b; background-color: #fffacd; width: 1000px;font-family: vernada;
+    font-size: 16px;
+}
+
+.bug input {
+    width: 100px;
+    margin: 5px;
+    font-size: 14px;
+    text-align: center;
+    height: 20px;
+}
+
+.description input {
+    width: 400px;
+    margin: 5px;
+    font-size: 11px;
+    text-align: left;
+    height: 20px;
+}
+
+.status select {
+    width: 100px;
+    margin: 5px;
+    font-size: 14px;
+    text-align: left;
+    height: 25px;
+}
+
+.points select {
+    width: 36px;
+    margin: 5px;
+    font-size: 14px;
+    text-align: left;
+    height: 25px;
+}
+
+.project select {
+    width: 100px;
+    margin: 5px;
+    font-size: 14px;
+    text-align: left;
+    height: 25px;
+}
+
+.estimate input {
+    width: 100px;
+    margin: 5px;
+    font-size: 11px;
+    text-align: left;
+    height: 20px;
+}
+
+.the_bug {
+    margin: 4px;
+    border: 1px solid #00008b;
+    background-color: #e6e6fa;
+}
+
+.current_stack {
+    padding: 5px;
+    margin: 10px;
+    margin-top: -10px;
+    padding-top: 0px;
+    background-color: #fff0f5;
+}
+
+.bug_item {
+    margin: 1px;
+}
+
+.t_date {
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 5px;
+    color: #00008b;
+    font-family: verdana;
+}
+
+.user_count {
+    float:right;
+    font-size: 14px;
+    font-weight: bold;
+    color: #8b0000;
+}
+
+.close {
+    float:right;
+}
+
+.close a {
+    color: black;
+    text-decoration: none;
+    margin-top: -20px;
+    position: absolute;
+    font-size: 18px;
+    font-family: Arial;
+}
+
+.admin_div {
+    background-color: #ffa07a !important;
+}
+
+.delete, .delete a {
+    font-size:13px;margin-top:2px;color:red;text-decoration: none;
+}
+.delete a:hover {
+    color: #00008b;
+}
+
+.est {
+    font-style: italic;
+    text-align: left;
+}
+
+.statistic {
+    position:absolute;
+    top:30px;
+    left:1105px;
+    color: darksilver;
+    border: 1px dotted silver;
+    width: 370px;
+    padding: 3px;
+}
+
+.zero_users {
+    font-size:11px;
+    color: black;
+}
+
+.delete_menu a {
+    color:red;
+}
+
+.delete_menu a:hover {
+    color:red;
+}
+
+.sub_menu {
+    /*background-color: green;*/
+    margin-left: 20px;
+}
+
+.sub_sub_menu {
+    /*background-color: grey;*/
+    margin-left: 40px;
+}
+
+.item_list {
+    margin-left: 60px;
+}
+
+.modal_window {
+    display: none;
+    position: absolute;
+    width: 990px;
+    left:5px;
+    top:5px;
+    min-height: 300px;
+    background-color: silver;
+    border-color: 1px solid #00008b;
+}
+
+#modal_window_close {
+    margin: 10px;
+}
+
+#description {
+    width: 750px;
+    margin: 10px;
+}
+
+#title{
+    width: 500px;
+    margin: 10px;
+
+}
+
+#body {
+    width: 750px;
+    margin: 10px;
+    min-height: 400px;
+}
+
+.item_show {
+    width: 400px;
+    border: 1px solid grey;
+    margin: 5px;
+    float:left;
+}
+
+.item_title_show {
+
+}
+
+.item_description_show {
+    color: #ee82ee;
+    font-style: italic;
+}
+#cssmenu {
+    position: relative;
+    height: 44px;
+    background: #2b2f3a;
+    width: auto;
+}
+#cssmenu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+}
+#cssmenu > ul {
+    position: relative;
+    display: block;
+    background: #2b2f3a;
+    height: 32px;
+    width: 100%;
+    z-index: 500;
+}
+#cssmenu > ul > li {
+    display: block;
+    position: relative;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+#cssmenu > ul > #menu-button {
+    display: none;
+}
+#cssmenu ul li a {
+    display: block;
+    font-family: Helvetica, sans-serif;
+    text-decoration: none;
+}
+#cssmenu > ul > li > a {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 15px 20px;
+    color: #7a8189;
+    text-transform: uppercase;
+    -webkit-transition: color 0.25s ease-out;
+    -moz-transition: color 0.25s ease-out;
+    -ms-transition: color 0.25s ease-out;
+    -o-transition: color 0.25s ease-out;
+    transition: color 0.25s ease-out;
+}
+#cssmenu > ul > li.has-sub > a {
+    padding-right: 32px;
+}
+#cssmenu > ul > li:hover > a {
+    color: #ffffff;
+}
+#cssmenu li.has-sub::after {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+#cssmenu > ul > li.has-sub::after {
+    right: 10px;
+    top: 20px;
+    border: 5px solid transparent;
+    border-top-color: #7a8189;
+}
+#cssmenu > ul > li:hover::after {
+    border-top-color: #ffffff;
+}
+#indicatorContainer {
+    position: absolute;
+    height: 12px;
+    width: 100%;
+    bottom: 0px;
+    overflow: hidden;
+    z-index: -1;
+}
+#pIndicator {
+    position: absolute;
+    height: 0;
+    width: 100%;
+    border: 12px solid transparent;
+    border-top-color: #2b2f3a;
+    z-index: -2;
+    -webkit-transition: left .25s ease;
+    -moz-transition: left .25s ease;
+    -ms-transition: left .25s ease;
+    -o-transition: left .25s ease;
+    transition: left .25s ease;
+}
+#cIndicator {
+    position: absolute;
+    height: 0;
+    width: 100%;
+    border: 12px solid transparent;
+    border-top-color: #2b2f3a;
+    top: -12px;
+    right: 100%;
+    z-index: -2;
+}
+#cssmenu ul ul {
+    position: absolute;
+    left: -9999px;
+    top: 70px;
+    opacity: 0;
+    -webkit-transition: opacity .3s ease, top .25s ease;
+    -moz-transition: opacity .3s ease, top .25s ease;
+    -ms-transition: opacity .3s ease, top .25s ease;
+    -o-transition: opacity .3s ease, top .25s ease;
+    transition: opacity .3s ease, top .25s ease;
+    z-index: 1000;
+}
+#cssmenu ul ul ul {
+    top: 37px;
+    padding-left: 5px;
+}
+#cssmenu ul ul li {
+    position: relative;
+}
+#cssmenu > ul > li:hover > ul {
+    left: auto;
+    top: 44px;
+    opacity: 1;
+}
+#cssmenu ul ul li:hover > ul {
+    left: 170px;
+    top: 0;
+    opacity: 1;
+}
+#cssmenu ul ul li a {
+    width: 130px;
+    border-bottom: 1px solid #eee;
+    padding: 10px 20px;
+    font-size: 12px;
+    color: #9ea2a5;
+    background: #fff;
+    -webkit-transition: all .35s ease;
+    -moz-transition: all .35s ease;
+    -ms-transition: all .35s ease;
+    -o-transition: all .35s ease;
+    transition: all .35s ease;
+}
+#cssmenu ul ul li:hover > a {
+    background: #f6f6f6;
+    color: #8c9195;
+}
+#cssmenu ul ul li:last-child > a,
+#cssmenu ul ul li.last > a {
+    border-bottom: 0;
+}
+.submenuArrow {
+    border: 6px solid transparent;
+    width: 0;
+    height: 0;
+    border-bottom-color: #fff;
+    position: absolute;
+    top: -12px;
+}
+#cssmenu ul ul li.has-sub::after {
+    border: 4px solid transparent;
+    border-left-color: #9ea2a5;
+    right: 10px;
+    top: 12px;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+    -webkit-transition: -webkit-transform 0.2s ease, right 0.2s ease;
+}
+#cssmenu ul ul li.has-sub:hover::after {
+    border-left-color: #fff;
+    right: -5px;
+    -webkit-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+@media all and (max-width: 800px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 1024px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min-resolution: 192dpi) and (max-width: 1024px), only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
+    #cssmenu {
+        width: auto;
+    }
+    #cssmenu ul {
+        width: auto;
+    }
+    #cssmenu .submenuArrow,
+    #cssmenu #indicatorContainer {
+        display: none;
+    }
+    #cssmenu > ul {
+        height: auto;
+        display: block;
+    }
+    #cssmenu > ul > li {
+        float: none;
+    }
+    #cssmenu li,
+    #cssmenu > ul > li {
+        display: none;
+    }
+    #cssmenu ul ul,
+    #cssmenu ul ul ul,
+    #cssmenu ul > li:hover > ul,
+    #cssmenu ul ul > li:hover > ul {
+        position: relative;
+        left: auto;
+        top: auto;
+        opacity: 1;
+        padding-left: 0;
+    }
+    #cssmenu ul .has-sub::after {
+        display: none;
+    }
+    #cssmenu ul li a {
+        padding: 12px 20px;
+    }
+    #cssmenu ul ul li a {
+        border: 0;
+        background: none;
+        width: auto;
+        padding: 8px 35px;
+    }
+    #cssmenu ul ul li:hover > a {
+        background: none;
+        color: #8c9195;
+    }
+    #cssmenu ul ul ul a {
+        padding: 8px 50px;
+    }
+    #cssmenu ul ul ul ul a {
+        padding: 8px 65px;
+    }
+    #cssmenu ul ul ul ul ul a {
+        padding: 8px 80px;
+    }
+    #cssmenu ul ul ul ul ul ul a {
+        padding: 8px 95px;
+    }
+    #cssmenu > ul > #menu-button {
+        display: block;
+        cursor: pointer;
+    }
+    #cssmenu #menu-button > a {
+        padding: 14px 20px;
+    }
+    #cssmenu ul.open li,
+    #cssmenu > ul.open > li {
+        display: block;
+    }
+    #cssmenu > ul.open > li#menu-button > a {
+        color: #fff;
+        border-bottom: 1px solid rgba(150, 150, 150, 0.1);
+    }
+    #cssmenu #menu-button::after {
+        display: block;
+        content: '';
+        position: absolute;
+        height: 3px;
+        width: 22px;
+        border-top: 2px solid #7a8189;
+        border-bottom: 2px solid #7a8189;
+        right: 20px;
+        top: 15px;
+    }
+    #cssmenu #menu-button::before {
+        display: block;
+        content: '';
+        position: absolute;
+        height: 3px;
+        width: 22px;
+        border-top: 2px solid #7a8189;
+        right: 20px;
+        top: 25px;
+    }
+    #cssmenu ul.open #menu-button::after,
+    #cssmenu ul.open #menu-button::before {
+        border-color: #fff;
+    }
+}
