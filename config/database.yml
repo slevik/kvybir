@@ -8,7 +8,7 @@ development:
   encoding: unicode
   database: d2sjtrmugc0l5c
   pool: 5
-  username: jlzdnbcsntsxlq
+  username: vysxmujjcfsgur
   password: F1cEDEYXaAaWAlDC5EvcpGYYjq
   host: ec2-107-20-191-205.compute-1.amazonaws.com
   port: 5432
