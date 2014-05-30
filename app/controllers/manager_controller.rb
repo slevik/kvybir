@@ -1,6 +1,7 @@
 class ManagerController < ApplicationController
 
   http_basic_authenticate_with :name => "manager", :password => "manager"
+  layout 'manager'
 
   def index
     @menus = Submenus.where(menu: nil).order('position ASC').limit(1000).all

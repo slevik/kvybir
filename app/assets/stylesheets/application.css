@@ -199,5 +199,20 @@
     width: 750px;
     margin: 10px;
     min-height: 400px;
+}
 
+.item_show {
+    width: 400px;
+    border: 1px solid grey;
+    margin: 5px;
+    float:left;
+}
+
+.item_title_show {
+
+}
+
+.item_description_show {
+    color: #ee82ee;
+    font-style: italic;
 }

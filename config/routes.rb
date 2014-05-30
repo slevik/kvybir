@@ -1,11 +1,7 @@
 OomaReport::Application.routes.draw do
-  #get "list/index"
-  #get "report/today"
-  #post "report/today"
-  #get "report/go"
-  #get "report/delete"
-  #get "report/day"
+  get "item/show/:id" => 'item#show'
 
+  get "manager" => 'manager#index'
   get "manager/index"
   get "manager/deletemenu"
   post "manager/addmenu"
@@ -16,7 +12,7 @@ OomaReport::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'list#index'
+   root 'item#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
