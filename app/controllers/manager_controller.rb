@@ -11,8 +11,8 @@ class ManagerController < ApplicationController
     if request.post?
       if valid_params_submenu?
         b = Submenus.new
-        b.title = params[:title]
-        b.menu = params[:menu]
+        b.title = params[:title].html_safe
+        b.menu = params[:menu].html_safe
         b.save
         redirect_to manager_index_path
       end
@@ -23,10 +23,10 @@ class ManagerController < ApplicationController
     if request.post?
       if valid_params_submenu?
         b = Items.new
-        b.title = params[:title]
-        b.description = params[:description]
-        b.body = params[:body]
-        b.menu = params[:menu]
+        b.title = params[:title].html_safe
+        b.description = params[:description].html_safe
+        b.body = params[:body].html_safe
+        b.menu = params[:menu].html_safe
         b.save
         redirect_to manager_index_path
       end
@@ -38,10 +38,10 @@ class ManagerController < ApplicationController
       if valid_params_submenu?
         b = Items.where(id: params[:id]).first
          if b
-          b.title = params[:title]
-          b.description = params[:description]
-          b.body = params[:body]
-          b.menu = params[:menu]
+          b.title = params[:title].html_safe
+          b.description = params[:description].html_safe
+          b.body = params[:body].html_safe
+          b.menu = params[:menu].html_safe
           b.save
          end
         redirect_to manager_index_path
