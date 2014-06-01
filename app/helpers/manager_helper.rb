@@ -67,7 +67,7 @@ module ManagerHelper
       f = f + ' <br />'
       f = f + text_area_tag("description", nil, :placeholder => 'description')
       f = f + ' <br />'
-      f = f + text_area_tag("body", nil, :placeholder => 'body', :class => "_sm2class#{menu.id}")
+      f = f + text_area_tag("body", nil, :placeholder => 'body', :class => "_sm2class#{menu.id}", :id => "_sm2class#{menu.id}")
       f = f + ' <br />'
       f = f + submit_tag(" add")
       f.html_safe
@@ -85,7 +85,7 @@ module ManagerHelper
       f = f + ' <br />'
       f = f + text_area_tag("description", item.description, :placeholder => 'description')
       f = f + ' <br />'
-      f = f + text_area_tag("body", item.body, :placeholder => 'body', :class => "edit_item_class#{item.id}")
+      f = f + text_area_tag("body", item.body, :placeholder => 'body', :class => "edit_item_class#{item.id}", :id => "edit_item_class#{item.id}")
       f = f + ' <br />'
       f = f + submit_tag(" update")
       f.html_safe
