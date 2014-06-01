@@ -20,7 +20,7 @@
     padding:0px; margin: 0px;
     /*background-color: #dadada;*/
     width: 100%;
-    font-family: vernada;
+    font-family: Arial;
     font-size: 16px;
     padding-right: 0px !important;
 }
@@ -254,12 +254,12 @@
 }
 
 .item_title_show {
-    font-family: vernada;
+    font-family: Arial;
     font-size: 19px;
 }
 
 .item_title_show_full {
-    font-family: vernada;
+    font-family: Arial;
     font-size: 25px;
 }
 
@@ -275,14 +275,14 @@
 
 .item_description_show {
     color: #a9a9a9;
-    font-family: vernada;
+    font-family: Arial;
     font-size: 15px;
     /*font-style: italic;*/
 }
 
 .item_description_show_full {
     color: #a9a9a9;
-    font-family: vernada;
+    font-family: Arial;
     font-size: 18px;
     /*font-style: italic;*/
 }
@@ -296,7 +296,7 @@
 .top_title {
     color: #ffffff;
     font-size: 34px;
-    font-family: vernada;
+    font-family: Arial;
     padding: 36px;
     padding-left: 80px;
 }
@@ -307,5 +307,5 @@
 }
 
 .body {
-    font-family: vernada;
+    font-family: Arial;
 }

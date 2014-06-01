@@ -45,7 +45,8 @@ module ManagerHelper
     return '' unless items
     res = '<div class="item_list"> '
     items.map do |item|
-      res = res + "<span style='cursor:pointer; text-decoration:underline;color:darkgrey;' onclick='$(\"#modal_window_body\").html($(\"#edit_item_#{item.id}\").html()); $(\".modal_window\").toggle();window.scrollTo(1, 1);'>#{item.title}</span>"
+      res = res + "<span style='cursor:pointer; text-decoration:underline;color:darkgrey;' style='cursor:pointer; color:blue;' onclick='$(\"#edit_item_#{item.id}\").show();show_e(\"edit_item_class#{item.id}\")'> #{item.title} </span>"
+      #res = res + "<span style='cursor:pointer; text-decoration:underline;color:darkgrey;' onclick='$(\"#modal_window_body\").html($(\"#edit_item_#{item.id}\").html()); $(\".modal_window\").toggle();window.scrollTo(1, 1);'>#{item.title}</span>"
       res = res + "<span class='delete_menu' style=''>#{link_to(' [delete]', "/manager/deleteitem?id=#{item.id}")}</span>"
       res = res + form2_edit(item)
       res = res + "<br />"
@@ -60,12 +61,13 @@ module ManagerHelper
   def form2(menu)
     res = form_tag("/manager/additem", method: "post") do
       f = ''
+      f = f + '<div id="modal_window_close" style="cursor:pointer;float:right;" onclick="$(\'#_sm2' + "#{menu.id}" + '\').hide();">[ close ]</div>'
       f = f + hidden_field_tag("menu", nil, :value => menu.id)
       f = f + text_field_tag("title", nil, :placeholder => 'title')
       f = f + ' <br />'
       f = f + text_area_tag("description", nil, :placeholder => 'description')
       f = f + ' <br />'
-      f = f + text_area_tag("body", nil, :placeholder => 'body', :class => 'body22')
+      f = f + text_area_tag("body", nil, :placeholder => 'body', :class => "_sm2class#{menu.id}")
       f = f + ' <br />'
       f = f + submit_tag(" add")
       f.html_safe
@@ -76,13 +78,14 @@ module ManagerHelper
   def form2_edit(item)
     res = form_tag("/manager/updateitem", method: "post") do
       f = ''
+      f = f + '<div id="modal_window_close" style="cursor:pointer;float:right;" onclick="$(\'#edit_item_' + "#{item.id}" + '\').hide();">[ close ]</div>'
       f = f + hidden_field_tag("id", nil, :value => item.id)
       f = f + hidden_field_tag("menu", nil, :value => item.menu)
       f = f + text_field_tag("title", nil, :value => item.title, :placeholder => 'title')
       f = f + ' <br />'
       f = f + text_area_tag("description", item.description, :placeholder => 'description')
       f = f + ' <br />'
-      f = f + text_area_tag("body", item.body, :placeholder => 'body', :class => 'body22')
+      f = f + text_area_tag("body", item.body, :placeholder => 'body', :class => "edit_item_class#{item.id}")
       f = f + ' <br />'
       f = f + submit_tag(" update")
       f.html_safe
@@ -117,7 +120,8 @@ module ManagerHelper
 
   def print_add_item_link(menu)
     res = ''
-    res = res + " <span id='sm2#{menu.id}' style='cursor:pointer; color:blue;' onclick='$(\"#modal_window_body\").html($(\"#_sm2#{menu.id}\").html()); $(\".modal_window\").toggle();window.scrollTo(1, 1);'> [add item] </span><div id='_sm2#{menu.id}' style='display:none'>#{form2(menu)}</div>"
+    #res = res + " <span id='sm2#{menu.id}' style='cursor:pointer; color:blue;' onclick='$(\"#modal_window_body\").html($(\"#_sm2#{menu.id}\").html()); $(\".modal_window\").toggle();window.scrollTo(1, 1);'> [add item] </span><div id='_sm2#{menu.id}' style='display:none'>#{form2(menu)}</div>"
+    res = res + " <span id='sm2#{menu.id}' style='cursor:pointer; color:blue;' onclick='$(\"#_sm2#{menu.id}\").show();show_e(\"_sm2class#{menu.id}\")'> [add item] </span><div id='_sm2#{menu.id}' style='display:none'>#{form2(menu)}</div>"
     res
   end
 
