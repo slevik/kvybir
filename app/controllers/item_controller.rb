@@ -16,6 +16,7 @@ class ItemController < ApplicationController
   end
 
   def newsinfo
+    @news = News.order('cdate DESC, id DESC').limit(10).all
     @item = News.where(:id => params[:id]).first
   end
 
