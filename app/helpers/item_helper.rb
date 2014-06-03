@@ -127,17 +127,21 @@ module ItemHelper
     res.html_safe
   end
 
-  #def print_horizontal_items(menus)
-  #  return '' unless menus
-  #  return '' if menus.size == 0
-  #  res = ''
-  #  res = res + '<ul>'
-  #  menus.map do |menu|
-  #    res = res + print_horizontal_item_link(menu)
-  #  end
-  #  res = res + '</ul>'
-  #  res.html_safe
-  #end
 
+  def show_news_vertical(news)
+    res = ''
+    news.map do |new|
+      res = res + "<div class='item_show_news' style='width:100% !important'> <div class='item_title_show' style='font-size:11px;'>#{new.cdate}</div><div class='item_title_show' style='font-size:14px;'><a href='/item/newsinfo/#{new.id}'>#{new.title} </a></div><div style='font-size:12px;' class='item_description_show'>#{new.description}</div></div>"
+    end
+    res.html_safe
+  end
+
+  def show_news_vertical_full(items)
+    res = ''
+    items.map do |menu|
+      res = res + "<div class='item_show'><div class='item_title_show'>#<a href='/item/newsinfo/#{menu.id}'>#{menu.title}</a></div><div class='item_description_show'>#{menu.description}</div></div>"
+    end
+    res.html_safe
+  end
 
 end

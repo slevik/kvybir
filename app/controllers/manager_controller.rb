@@ -7,6 +7,27 @@ class ManagerController < ApplicationController
     @menus = Submenus.where(menu: nil).order('position ASC').limit(1000).all
   end
 
+  def news
+    if request.post?
+      if true#valid_params_submenu?
+        b = News.new
+        b.title = params[:title].html_safe[0,200]
+        b.description = params[:description].html_safe[0,200]
+        b.body = params[:body].html_safe
+        b.cdate = params[:cdate].html_safe
+        b.save
+      end
+    end
+    @news = News.order('cdate DESC, id DESC').limit(1000).all
+  end
+
+  def deletenews
+    id = params[:id]
+    bug = News.find_by_id(id)
+    bug.destroy if bug
+    redirect_to manager_news_path
+  end
+
   def addmenu
     if request.post?
       if valid_params_submenu?

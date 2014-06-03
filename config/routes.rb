@@ -1,9 +1,14 @@
 OomaReport::Application.routes.draw do
   get "item/show/:id" => 'item#show'
   get "item/info/:id" => 'item#info'
+  get "item/newsinfo/:id" => 'item#newsinfo'
 
   get "manager" => 'manager#index'
   get "manager/index"
+  get "manager/news"
+
+  get "manager/deletenews/:id" => 'manager#deletenews'
+  post "manager/news"
   get "manager/deletemenu"
   post "manager/addmenu"
   post "manager/additem"

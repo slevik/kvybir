@@ -1,0 +1,20 @@
+<%= tinymce_assets %>
+
+<div class="">
+  <div>
+    <%= print_news(@news) %>
+  </div>
+  <div class="news_add_form">
+    <%= print_news_form %>
+  </div>
+</div>
+
+
+<%= tinymce %>
+
+<script>
+    $(document).ready(function() {
+        $(function() { $( "#cdate" ).datepicker().datepicker('setDate', 'today');  });
+    });
+</script>
+
