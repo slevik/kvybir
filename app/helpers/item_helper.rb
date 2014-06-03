@@ -139,7 +139,7 @@ module ItemHelper
   def show_news_vertical_full(items)
     res = ''
     items.map do |menu|
-      res = res + "<div class='item_show'><div class='item_title_show'>#<a href='/item/newsinfo/#{menu.id}'>#{menu.title}</a></div><div class='item_description_show'>#{menu.description}</div></div>"
+      res = res + "<div class='item_show'><div class='item_title_show'> <span style='margin:4px;font-size:12px;float:right;'>#{menu.cdate}</span> #<a href='/item/newsinfo/#{menu.id}'>#{menu.title}</a></div><div class='item_description_show'>#{menu.description}</div></div>"
     end
     res.html_safe
   end
