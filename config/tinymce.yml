@@ -7,3 +7,8 @@ theme_advanced_buttons3_add:
 plugins:
   - table
   - fullscreen
+  - advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker
+  - searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking
+  - save table contextmenu directionality template paste textcolor
+toolbar:
+  - insertfile undo redo | fontsizeselect | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview media fullpage | forecolor backcolor
