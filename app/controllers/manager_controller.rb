@@ -70,6 +70,21 @@ class ManagerController < ApplicationController
     end
   end
 
+  def updatenews
+    if request.post?
+      if valid_params_submenu?
+        b = News.where(id: params[:id]).first
+        if b
+          b.title = params[:title].html_safe[0,200]
+          b.description = params[:description].html_safe[0,200]
+          b.body = params[:body].html_safe
+          b.save
+        end
+        redirect_to manager_news_path
+      end
+    end
+  end
+
   def deleteitem
     id = params[:id]
     bug = Items.find_by_id(id)

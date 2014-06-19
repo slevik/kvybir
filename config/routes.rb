@@ -13,6 +13,7 @@ OomaReport::Application.routes.draw do
   post "manager/addmenu"
   post "manager/additem"
   post "manager/updateitem"
+  post "manager/updatenews"
   get "manager/deleteitem"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
