@@ -8,6 +8,10 @@ class ItemController < ApplicationController
     @news = News.order('cdate DESC, id DESC').limit(10).all
     @items = Items.where(:menu => params[:id]).order('position ASC').limit(1000).all
     @id = params[:id]
+    if @items.size == 1
+      redirect_to "/item/info/#{@items.first.id}"
+      return
+    end
   end
 
   def info

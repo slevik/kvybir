@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 module ItemHelper
 
   def show_item_body(item)
@@ -67,6 +68,8 @@ module ItemHelper
       res = res + print_vertical_menu_items(submenus)
       res = res + '</li>'
     end
+    res = res + "<li><a href='http://kvybir.freeforums.org/' target='_blank'><span>Форум</span></a></li>"
+    res = res + "<li><a href='http://twtpoll.com/kvybir' target='_blank'><span>ОПИТУВАННЯ</span></a></li>"
     res = res + '</ul>'
     res.html_safe
   end
