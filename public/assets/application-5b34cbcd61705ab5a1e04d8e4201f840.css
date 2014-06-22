@@ -1,3 +1,387 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+ */
+
+
+.inline {
+    float: left;
+}
+
+.main {
+    padding:0px; margin: 0px;
+    /*background-color: #dadada;*/
+    width: 100%;
+    font-family: Arial;
+    font-size: 16px;
+    padding-right: 0px !important;
+}
+
+.crumbs {
+    padding:0px;
+    margin: 0px;
+    /*margin-left: -5px;*/
+    padding-left: 5px;
+    background-color: #dadada;
+    width: 100%;
+    font-family: Arial;
+    font-size: 13px;
+    padding-right: 0px !important;
+    font-style: italic;
+}
+
+.home_image {
+    width: 15px;
+}
+
+.bug input {
+    width: 100px;
+    margin: 5px;
+    font-size: 14px;
+    text-align: center;
+    height: 20px;
+}
+
+.description input {
+    width: 400px;
+    margin: 5px;
+    font-size: 11px;
+    text-align: left;
+    height: 20px;
+}
+
+.status select {
+    width: 100px;
+    margin: 5px;
+    font-size: 14px;
+    text-align: left;
+    height: 25px;
+}
+
+.points select {
+    width: 36px;
+    margin: 5px;
+    font-size: 14px;
+    text-align: left;
+    height: 25px;
+}
+
+.project select {
+    width: 100px;
+    margin: 5px;
+    font-size: 14px;
+    text-align: left;
+    height: 25px;
+}
+
+.estimate input {
+    width: 100px;
+    margin: 5px;
+    font-size: 11px;
+    text-align: left;
+    height: 20px;
+}
+
+.the_bug {
+    margin: 4px;
+    border: 1px solid #00008b;
+    background-color: #e6e6fa;
+}
+
+.current_stack {
+    padding: 5px;
+    margin: 10px;
+    margin-top: -10px;
+    padding-top: 0px;
+    background-color: #fff0f5;
+}
+
+.bug_item {
+    margin: 1px;
+}
+
+.t_date {
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 5px;
+    color: #00008b;
+    font-family: verdana;
+}
+
+.user_count {
+    float:right;
+    font-size: 14px;
+    font-weight: bold;
+    color: #8b0000;
+}
+
+.close {
+    float:right;
+}
+
+.close a {
+    color: black;
+    text-decoration: none;
+    margin-top: -20px;
+    position: absolute;
+    font-size: 18px;
+    font-family: Arial;
+}
+
+.admin_div {
+    background-color: #ffa07a !important;
+}
+
+.delete, .delete a {
+    font-size:13px;margin-top:2px;color:red;text-decoration: none;
+}
+.delete a:hover {
+    color: #00008b;
+}
+
+.est {
+    font-style: italic;
+    text-align: left;
+}
+
+.statistic {
+    position:absolute;
+    top:30px;
+    left:1105px;
+    color: darksilver;
+    border: 1px dotted silver;
+    width: 370px;
+    padding: 3px;
+}
+
+.zero_users {
+    font-size:11px;
+    color: black;
+}
+
+.delete_menu a {
+    color:red;
+}
+
+.delete_menu a:hover {
+    color:red;
+}
+
+.sub_menu {
+    /*background-color: green;*/
+    margin-left: 20px;
+}
+
+.sub_sub_menu {
+    /*background-color: grey;*/
+    margin-left: 40px;
+}
+
+.item_list {
+    margin-left: 60px;
+}
+
+.modal_window {
+    display: none;
+    position: absolute;
+    width: 990px;
+    left:5px;
+    top:5px;
+    min-height: 300px;
+    background-color: silver;
+    border-color: 1px solid #00008b;
+}
+
+#modal_window_close {
+    margin: 10px;
+}
+
+#description {
+    width: 750px;
+    margin: 10px;
+}
+
+#title{
+    width: 500px;
+    margin: 10px;
+
+}
+
+#body {
+    width: 750px;
+    margin: 10px;
+    min-height: 400px;
+}
+
+.items_block {
+    width: 90%;
+}
+
+.item_show {
+    width: 40%;
+    /*border: 1px dotted grey;*/
+    margin: 0px;
+    float:left;
+    min-height: 100px;
+    padding: 10px;
+}
+
+.item_show_news {
+    /*border: 1px dotted grey;*/
+    margin: 0px;
+    float:left;
+    margin: 10px;
+}
+
+.item_show_full {
+    width: 80%;
+    /*border: 1px dotted grey;*/
+    margin: 0px;
+    float:left;
+    min-height: 100px;
+    padding: 10px;
+}
+
+.item_list_full_right {
+    width: 15%;
+    /*border: 1px dotted grey;*/
+    margin: 0px;
+    float:right;
+    min-height: 100px;
+    padding: 10px;
+}
+
+.item_newlist_full_right {
+    width: 15%;
+    /*border: 1px dotted grey;*/
+    margin: 0px;
+    float:right;
+    padding: 0px;
+    /*background-color: #e6faba;*/
+    margin-top: 10px;
+}
+
+.item_title_show {
+    font-family: Arial;
+    font-size: 19px;
+}
+
+.item_title_show_full {
+    font-family: Arial;
+    font-size: 25px;
+}
+
+.item_title_show a {
+    text-decoration: none;
+    color: black;
+}
+
+.item_title_show a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+.item_description_show {
+    color: #a9a9a9;
+    font-family: Arial;
+    font-size: 13px;
+    /*font-style: italic;*/
+}
+
+.item_description_show_full {
+    color: #a9a9a9;
+    font-family: Arial;
+    font-size: 15px;
+    /*font-style: italic;*/
+}
+
+.top {
+    width:100%;
+    height: 100px;
+    /*background-color: #2B2F3B;*/
+}
+
+.top_title {
+    color: #ffffff;
+    font-size: 34px;
+    font-family: Arial;
+    padding: 36px;
+    padding-left: 80px;
+}
+
+.top_title a, top_title a:hover {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.top_manager {
+    background-color: #8b0000;
+    padding: 10px;
+    margin: 0px;
+    margin-bottom: 10px;
+    color: #ffffff;
+    width: 95%;
+}
+
+.top_manager a {
+    font-weight: bold;
+    font-size: 15px;
+    color: #ffffff;
+    text-decoration: none;
+}
+.top_manager a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+
+.body {
+    font-family: Arial;
+}
+
+.news_add_form {
+    width:80%;
+    background-color: #add8e6;
+    border: 1px solid gray;
+    padding: 20px;
+}
+
+.news_item {
+    font-size: 14px;
+}
+
+.description_item {
+    font-size: 11px;
+}
+
+.admin_news_line {
+    width:30%;
+    background-color: #add8e6;
+    border: 1px solid gray;
+    padding: 4px;
+}
+
+.top1 {
+    background: #2b2f3a;
+    background-image: url('../assets/top1.jpg');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-origin: content-box;
+}
+
+.bottom1 {
+    background-image: url('../assets/top2.jpg');
+}
 #cssmenu {
     position: relative;
     height: 44px;
